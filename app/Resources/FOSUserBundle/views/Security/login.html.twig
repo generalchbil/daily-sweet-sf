@@ -1,5 +1,56 @@
 {% extends "@FOSUser/layout.html.twig" %}
 
 {% block fos_user_content %}
-    {{ include('@FOSUser/Security/login_content.html.twig') }}
+    {% trans_default_domain 'FOSUserBundle' %}
+
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-login">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <a href="/login" class="active" id="login-form-link">Login</a>
+                            </div>
+                            <div class="col-xs-6">
+                                <a href="/register" id="register-form-link">Register</a>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form id="login-form" action="{{ path("fos_user_security_check") }}" method="post" role="form" style="display: block;">
+                                    {% if csrf_token %}
+                                        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                                    {% endif %}
+                                    <div class="form-group">
+                                        <input type="text" id="username" name="_username" tabindex="1" class="form-control" placeholder="Username" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" id="password" name="_password" tabindex="2" class="form-control" placeholder="Password">
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <input type="checkbox" id="remember_me" name="_remember_me" tabindex="3" class="">
+                                        <label for="remember"> Remember Me</label>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-sm-6 col-sm-offset-3">
+                                                <input type="submit" id="_submit" name="_submit" value="Valider" tabindex="4" class="form-control btn btn-login btn btn-danger btn-lg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock fos_user_content %}
