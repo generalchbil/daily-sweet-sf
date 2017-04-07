@@ -1,4 +1,10 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: generalchbil
+ * Date: 07/04/2017
+ * Time: 13:52
+ */
 
 namespace AppBundle\Controller;
 
@@ -6,14 +12,15 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class MenuController extends Controller
+class OrdersController extends Controller
 {
+
     /**
-     * @Route("/food-menu", name="food")
+     * @Route("/commande", name="commande")
      */
-    public function indexAction(Request $request)
+    public function listOrdersAction(Request $request)
     {
         // replace this example code with whatever you need
-        return $this->render('food-menu.html.twig');
+        return $this->render('orders.html.twig');
     }
 }
