@@ -64,3 +64,7 @@ $(document).ready(function() {
 	var $scrollDownArrow = $('#scrollDownArrow');
 
 });
+$('#myTab a').click(function (e) {
+	e.preventDefault()
+	$(this).tab('show')
+})

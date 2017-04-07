@@ -11,12 +11,14 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class OrdersController extends Controller
 {
 
     /**
      * @Route("/commande", name="commande")
+     * @Security("is_granted('IS_AUTHENTICATED_FULLY')")
      */
     public function listOrdersAction(Request $request)
     {
