@@ -6,11 +6,11 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: en
+    locale: fr
 
 framework:
     #esi:             ~
-    translator:       ~
+    translator:       { fallback: [%locale%] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -74,6 +74,9 @@ fos_user:
   db_driver: orm
   firewall_name: main
   user_class: AppBundle\Entity\UserAdmin
+  registration:
+      form:
+          type: AppBundle\Form\RegistrationType
   from_email:
           address: chebil.abdelffatteh@gmail.com
           sender_name: You

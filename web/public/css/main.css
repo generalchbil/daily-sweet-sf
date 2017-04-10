@@ -317,6 +317,11 @@ section::before,section::after {
 .br-green {
     background-color:#51d466 !important;
 }
+.btn-color {
+    background-color:#d9534f;
+    color: #fff;
+
+}
 .pricing {
     border-top:1px solid #f1f1f1;
 }
@@ -374,13 +379,11 @@ section::before,section::after {
 }
 .form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control {
     cursor:not-allowed;
-    background-color: transparent;
 }
 .form-control {
     height:38px;
     font-size:14px;
     vertical-align:middle;
-    background-color:transparent;
     -webkit-border-radius:2px;
     -webkit-border-radius:2px;
     -moz-border-radius:2px;
