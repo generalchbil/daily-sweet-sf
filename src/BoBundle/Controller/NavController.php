@@ -6,7 +6,7 @@
  * Time: 13:39
  */
 
-namespace AppBundle\Controller;
+namespace BoBundle\Controller;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

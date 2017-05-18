@@ -6,14 +6,14 @@
  * Time: 12:07
  */
 
-namespace AppBundle\Entity;
+namespace BoBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 
 /**
  * Class UserAdmin
- * @package AppBundle\Entity
+ * @package BoBundle\Entity
  *
  * @ORM\Entity
  * @ORM\Table(name="daily_sweet_users")
