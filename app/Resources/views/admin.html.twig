@@ -1,0 +1,53 @@
+{%  extends 'layout.html.twig' %}
+
+{% block content %}
+    <div id="food-menu">
+        <section class="ss-style-top"></section>
+        <div class="container inner">
+            <h2 class="section-title text-center">Gestion Catalogue</h2>
+            <p class="lead main text-center">There is no sincerer love than the love of food!</p>
+
+            <div class="row">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" data-toggle="tab" href="#ingrediants" role="tab">Ingrediant's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#viandes" role="tab">Viande's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#desserts" role="tab">Dessert's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#sauces" role="tab">Sauce's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#boissons" role="tab">Boisson's</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#frites" role="tab">Frite's</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active" id="ingrediants" role="tabpanel">
+                    </div>
+                    <div class="tab-pane" id="viandes" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane" id="desserts" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane" id="sauces" role="tabpanel">
+                    </div>
+                    <div class="tab-pane" id="boissons" role="tabpanel">
+
+                    </div>
+                    <div class="tab-pane" id="frites" role="tabpanel">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{%  endblock %}

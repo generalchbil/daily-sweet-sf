@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+{%  block head %}
+    {%  include 'head.html.twig' %}
+{% endblock %}
+<body data-spy="scroll" data-target="#navbar" data-offset="120" >
+{% block nav %}
+{%  include 'nav.html.twig' %}
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+{% include 'footer.html.twig' %}
+{% endblock %}
+<script src="public/js/jquery-2.1.3.min.js"></script>
+<script src="public/js/jquery.actual.min.js"></script>
+<script src="public/js/jquery.scrollTo.min.js"></script>
+<script src="public/js/bootstrap.min.js"></script>
+<script src="public/js/main.js"></script>
+</body>
+</html>
